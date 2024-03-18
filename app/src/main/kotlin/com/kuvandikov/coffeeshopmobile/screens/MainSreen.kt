@@ -74,6 +74,7 @@ fun Bottombar(navController: NavHostController) {
     Card(
         modifier = Modifier.dropShadow(
             color = Color(0x40E4E4E4),
+            borderRadius = 24.dp,
             blurRadius = 24.dp,
             offsetX = 0.dp,
             offsetY = (-20).dp

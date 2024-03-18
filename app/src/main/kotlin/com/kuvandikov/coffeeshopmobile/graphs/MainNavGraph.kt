@@ -1,6 +1,8 @@
 package com.kuvandikov.coffeeshopmobile.graphs
 
+import android.util.Log
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -27,7 +29,11 @@ fun MainNavGraph(navController: NavHostController) {
     ) {
         composable(route = BottomBarScreen.Home.route){
             Box(modifier =Modifier.fillMaxSize() , contentAlignment = Alignment.BottomEnd) {
-                Image(painter = painterResource(id = R.drawable.image_cappucino), contentDescription = "", modifier = Modifier.size(200.dp))
+                Image(painter = painterResource(id = R.drawable.image_cappucino), contentDescription = "", modifier = Modifier
+                    .size(200.dp)
+                    .clickable {
+                        Log.d("TAG", "MAIN_SCREEN")
+                    })
             }
         }
         composable(route = BottomBarScreen.Heart.route){
